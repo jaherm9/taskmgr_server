@@ -32,8 +32,8 @@ const limiter = rateLimit({windowMs:15*60*1000,max:3000})
 app.use(limiter)
 
 // Mongo DB Database Connection
-let URI = "mongodb+srv://testuser7777:testuser7777@crud.a3n6fei.mongodb.net/CRUD";
-let OPTION= {autoIndex:true}
+let URI = "mongodb+srv://<username>:<password>@crud.a3n6fei.mongodb.net/CRUD";
+let OPTION= {user: 'testuser7777',pass:'testuser7777',autoIndex:true}
 mongoose.connect(URI, OPTION,(error)=>{
     console.log("Mongo DB Connection Success")
     console.log(error)
